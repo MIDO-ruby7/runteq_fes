@@ -73,3 +73,20 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'pry-rails'
+
+# github login
+gem 'omniauth-github'
+gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
+gem "octokit"
+gem 'dotenv', '~> 2.7'
+gem 'sorcery'
+
+# csv import
+gem "roo", "~> 2.10.0"
+
+#i18n
+gem 'enum_help'
+gem 'rails-i18n'
