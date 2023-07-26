@@ -138,7 +138,8 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.github.key = ENV['GITHUB_CLIENT_ID']
   config.github.secret = ENV['GITHUB_CLIENT_SECRETS']
-  config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
+  #config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
+  config.github.callback_url = "https://runteq-festival-25666d1d1b53.herokuapp.com/oauth/callback?provider=github"
   config.github.user_info_mapping = {email: "email", name: "login"}
   config.github.scope = "user:email"
   #

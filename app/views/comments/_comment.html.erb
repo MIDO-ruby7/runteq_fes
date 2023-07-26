@@ -1,0 +1,9 @@
+<div class="chat-bubble chat-bubble-accent mb-2">
+  <h3 class="font-bold"><%= comment.user.nickname %></h3>
+  <div id="js-comment-<%= comment.id %>">
+    <%= simple_format(comment.body) %>
+  </div>
+  <% if current_user.own?(comment) %>
+    <%= button_to t('posts.show.delete'), comment_path(comment), method: :delete, data: { confirm: t('defaults.message.Are_you_sure') }, class:"btn btn-circle btn-sm" %>
+  <% end %>
+</div>
