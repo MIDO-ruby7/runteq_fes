@@ -1,0 +1,9 @@
+<%= form_with url: import_admin_posts_path, local: true, multipart: true do |form| %>
+  <div class="m-4">
+    <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: true }, class: "select select-bordered  select-success w-full max-w-xs", id: "post_category_id" %>
+  </div>
+  <div class="m-4">
+    <%= form.file_field :file, class:"file-input file-input-bordered file-input-accent w-full max-w-xs"  %>
+    <%= form.submit t('defaults.import'), class:"btn ml-4" %>
+  </div>
+<% end %>
