@@ -138,8 +138,8 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.github.key = ENV['GITHUB_CLIENT_ID']
   config.github.secret = ENV['GITHUB_CLIENT_SECRETS']
-  config.github.callback_url = "https://runfes-0c62b0da367a.herokuapp.com/oauth/callback?provider=github"
-  config.github.user_info_mapping = {email: "email", name: "login", avatar: "avatar"}
+  config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
+  config.github.user_info_mapping = {email: "email", name: "login"}
   config.github.scope = "user:email"
   #
   # config.paypal.key = ""
