@@ -1,0 +1,10 @@
+<div class="navbar bg-neutral text-neutral-conten mb-4 sm:w-full">
+  <div class="flex-1">
+    <div><%= link_to t('defaults.app'), posts_path, class:"btn btn-ghost normal-case text-xl" %></div>
+  </div>
+  <div class="flex-none gap-2">
+    <div class="form-control">
+      <%= render 'shared/category_filter' %>
+    </div>
+  </div>
+</div>

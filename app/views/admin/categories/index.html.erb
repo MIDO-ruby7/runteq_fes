@@ -1,0 +1,16 @@
+<div class="m-4">
+  <%= link_to t('.new'), new_admin_category_path, class:"btn btn-secondary"  %>
+</div>
+
+<div class="mt-4 mb-20 pl-10">
+  <% if @categories.present? %>
+    <% @categories.each do |category| %>
+      <li class="mb-1"><%= category.name %>
+        <%= link_to t('defaults.edit'), edit_admin_category_path(category), class:"text-xs text-pink-400 ml-10" %>
+        <%= link_to t('defaults.delete'), admin_category_path(category), data: { turbo_method: :delete, turbo_confirm: t('defaults.message.Are_you_sure') }, class:"text-xs text-pink-400 ml-10" %>
+      </li>
+    <% end %>
+  <% else %>
+    <p><%= t('.no_categories')%></p>
+  <% end %>
+</div>

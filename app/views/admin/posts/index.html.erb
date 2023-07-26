@@ -1,0 +1,27 @@
+<div class="collapse bg-base-200 mb-4">
+  <input type="checkbox" class="peer" />
+  <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content font-bold text-fuchsia-500">
+    <%= t('.open_uploader') %>
+  </div>
+  <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+    <%= link_to t('.category_edit'), admin_categories_path, class:"link link-hover text-fuchsia-500" %>
+    <p><%= render 'uploader', post: @post %></p>
+  </div>
+</div>
+<div>
+  <%= form_with url: admin_posts_path, method: :get, local: true do |form| %>
+    <div class="mb-4">
+      <%= form.collection_select :category_id, Category.all.order(id: :asc), :id, :name, { prompt:  t('defaults.message.select_default') }, class: "select select-bordered select-primary w-full max-w-xs" %>
+      <%= form.submit "Filter", class: "btn btn-primary ml-2" %>
+    </div>
+  <% end %>
+</div>
+<% if @posts.first.category_id == 1 %>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <%= render 'post1', posts: @posts %>
+  </div>
+<% else %>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <%= render @posts %>
+  </div>
+<% end %>

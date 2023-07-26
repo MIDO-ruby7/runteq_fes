@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RunteqFes</title>
+    <title>Runfes</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,7 +11,10 @@
   </head>
 
   <body>
-    <%= render 'shared/header'%>
+    <div class="navbar bg-accent mb-8">
+      <%= link_to t('defaults.app_admin'), admin_root_path, class:"btn btn-ghost normal-case text-xl" %>
+    </div>
+    <%= render 'shared/flash_message'%>
     <%= yield %>
   </body>
 </html>
