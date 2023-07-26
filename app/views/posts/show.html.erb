@@ -1,0 +1,26 @@
+<div class="flex justify-center flex-col">
+  <div class="card bg-base-100 w-auto md:w-2/3 shadow-xl m-5 border-4 border-indigo-300/75">
+    <iframe src=<%= @post.app_url %> alt=<%= @post.app_name %> class="w-full h-64"></iframe>
+    <div class="card-body">
+      <div class="card-title"><%= @post.app_name %></div>
+      <p class="card-actions justify-end font-bold"><%= @post.graduating_class %>期&nbsp;&nbsp;<%= @post.name %></p>
+      <p class="link flex justify-end"><%= link_to t('.contact_text', name: @post.name), @post.contact %></p>
+      <div class="badge badge-primary  badge-outline"><%= t('defaults.usage_technology') %></div><div><%= @post.usage_technology %></div>
+      <div class="badge badge-primary  badge-outline"><%= t('defaults.points_for_effort') %></div><div><%= @post.points_for_effort %></div>
+      <div class="badge badge-primary  badge-outline"><%= t('defaults.target_users') %></div><div><%= @post.target_users %></div>
+      <div class="badge badge-primary  badge-outline"><%= t('defaults.pain_point') %></div><div><%= @post.pain_point %></div>
+      <div class="badge badge-primary  badge-outline"><%= t('defaults.remedy') %></div><div><%= @post.remedy %></div>
+      <div class="badge badge-primary  badge-outline"><%= t('defaults.comment') %></div><div><%= @post.comment %></div>
+      <div class="flex flex-row mt-5">
+        <%= link_to t('defaults.cta'), @post.app_url, target: '_blank', class:"btn btn-sm btn-secondary mr-1" %>
+        <%= link_to t('defaults.watch_code'), @post.github_url, target: '_blank', class:"btn btn-sm btn-outline mr-1" %>
+      </div>
+    </div>
+  </div>
+  <div class="p-2">
+    <div>
+      <%= render 'comments/form', { post: @post, comment: @comment } %>
+      <%= render 'comments/comments', { comments: @comments } %>
+    </div>
+  </div>
+</div>
