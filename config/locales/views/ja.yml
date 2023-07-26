@@ -37,6 +37,7 @@ ja:
     pain_point: '課題'
     remedy: '解決策'
     comment: 'このアプリへの想い,コメント'
+    discrption: 'アプリの説明'
     message:
       require_login: 'ログインしてください'
       not_authorized: '管理者権限がありません'
