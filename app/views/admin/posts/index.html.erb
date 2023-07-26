@@ -16,12 +16,16 @@
     </div>
   <% end %>
 </div>
-<% if @posts.first.category_id == 1 %>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-    <%= render 'post1', posts: @posts %>
-  </div>
+<% if @posts.present? %>
+  <% if @posts.first.category_id == 1 %>
+    <div class="flex flex-wrap -m-2">
+      <%= render 'post1', posts: @posts %>
+    </div>
+  <% else %>
+    <div class="flex flex-wrap -m-2">
+      <%= render @posts %>
+    </div>
+  <% end %>
 <% else %>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-    <%= render @posts %>
-  </div>
+  <p><%= t('defaults.message.no_posts') %></p>
 <% end %>

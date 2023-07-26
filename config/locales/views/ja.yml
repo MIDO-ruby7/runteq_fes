@@ -46,6 +46,7 @@ ja:
       Are_you_sure: '本当に削除しますか？'
       select: '選択してください'
       select_default: '過去回はこちら✨'
+      no_posts: '投稿がありません'
   oauths:
     callback:
       success: 'ログインしました'
