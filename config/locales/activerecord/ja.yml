@@ -1,0 +1,39 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      post: '応募作品'
+      admin: '管理者'
+      category: 'カテゴリー'
+      comment: 'コメント'
+    attributes:
+      user:
+        name: '名前'
+        email: 'メールアドレス'
+        nickname: 'ニックネーム'
+        graduating_class: '期'
+        role: '権限'
+        avatar: 'アバター'
+      post:
+        graduating_class: '期'
+        name: '名前'
+        app_name: 'アプリ名'
+        contact: '連絡先'
+        app_url: 'アプリURL'
+        github_url: 'GitHub URL'
+        usage_technology: '使用技術'
+        points_for_effort: '工夫した点'
+        target_users: 'ターゲットユーザー'
+        pain_point: '課題'
+        remedy: '解決策'
+        comment: 'コメント'
+      category:
+        name: 'カテゴリー'
+      comment:
+        body: 'コメント'
+
+  enums:
+    user:
+      role:
+        admin: '管理者'
+        general: '一般'
