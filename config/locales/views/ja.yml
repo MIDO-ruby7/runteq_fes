@@ -1,9 +1,11 @@
 ja:
   defaults:
-    app: 'RUNTEQ祭'
+    app: 'RUNTEQ FES'
     app_admin: 'RUNTEQ祭管理画面'
     catch_copy1: 'バトランが甲子園なら、RUNTEQ祭は文化祭🎉'
     catch_copy2: 'Take Ownershipで、全員で楽しみましょう!!'
+    catch_copy3: 'さぁ、チケットは持ちましたか？'
+    catch_copy4: '※RUNTEQ関係者のみ入場できます'
     site_title: 'RUNTEQ祭|RUNTEQの文化祭🎉'
     cta: '使ってみる'
     site_url: 'http://boozefolio.herokuapp.com'

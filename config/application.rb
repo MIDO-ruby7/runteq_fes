@@ -6,6 +6,7 @@ Dotenv.load
 require "omniauth/rails_csrf_protection"
 require 'csv'
 require 'roo'
+require 'rinku'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
