@@ -15,6 +15,7 @@ ja:
     menu3: 'お気に入り'
     menu4: 'マイページ'
     login: 'ログイン'
+    github: 'Sign-in with Github'
     login_required: 'ログインしてください'
     logout: 'ログアウト'
     signup: '新規登録'
