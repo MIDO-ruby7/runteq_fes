@@ -1,13 +1,12 @@
 <div class="collapse bg-base-200 mb-4">
   <input type="checkbox" class="peer" />
-  <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content font-bold text-fuchsia-500 underline">
+  <div class="collapse-title bg-success text-success-content peer-checked:bg-secondary peer-checked:text-secondary-content font-bold underline">
     <%= t('.open_uploader') %>
   </div>
-  <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+  <div class="collapse-content bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     <%= link_to t('.category_edit'), admin_categories_path, class:"btn btn-warning" %>
     <p><%= render 'uploader', post: @post %></p>
     <p>現在の登録IDは、<%= Post.last.id %>です。</p>
-
   </div>
 </div>
 <div>

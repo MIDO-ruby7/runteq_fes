@@ -11,10 +11,17 @@
   </head>
 
   <body>
-    <div class="navbar bg-neutral mb-8">
+    <div class="navbar bg-warning mb-8">
       <%= link_to t('defaults.app_admin'), admin_root_path, class:"btn btn-ghost normal-case text-xl" %>
     </div>
     <%= render 'shared/flash_message'%>
     <%= yield %>
+    <div class="mt-10 mb-10">
+      <div class="btn btn-warning">
+        <%= link_to t('defaults.admin_path'), admin_root_path %>
+      </div>
+      <div class="btn btn-success">
+        <%= link_to t('defaults.posts_path'), posts_path %>
+      </div>
   </body>
 </html>

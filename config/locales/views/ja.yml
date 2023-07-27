@@ -10,7 +10,7 @@ ja:
     cta: '使ってみる'
     site_url: 'http://boozefolio.herokuapp.com'
     watch_code: 'コードを見る'
-    show: '詳細を見る'
+    show: '❣️詳細を見る'
     post_comment: 'コメントする'
     menu3: 'お気に入り'
     menu4: 'マイページ'
@@ -40,6 +40,9 @@ ja:
     remedy: '解決策'
     comment: 'このアプリへの想い,コメント'
     discrption: 'アプリの説明'
+    mypage: 'マイページ'
+    admin_path: '管理者ページTOPへ'
+    posts_path: 'ユーザー用ページに戻る'
     message:
       require_login: 'ログインしてください'
       not_authorized: '管理者権限がありません'
@@ -84,7 +87,7 @@ ja:
   admin:
     base:
       top:
-        post_edit: 'データを登録/編集する'
+        post_edit: '応募作品を登録/編集する'
         user_edit: 'ユーザーを管理する'
         category_edit: 'カテゴリーを管理する'
     categories:
