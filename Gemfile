@@ -90,3 +90,6 @@ gem "roo", "~> 2.10.0"
 #i18n
 gem 'enum_help'
 gem 'rails-i18n'
+
+#url auto link
+gem 'rinku'

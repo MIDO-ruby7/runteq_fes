@@ -9,10 +9,10 @@
       <div class="badge badge-primary  badge-outline"><%= t('defaults.comment') %></div>
       <div><%= post.comment %></div>
       <div class="flex flex-row mt-5">
-        <%= link_to t('defaults.edit'), edit_admin_post_path(post), class: "btn btn-sm btn-secondary mr-1" %>
-        <%= button_to t('defaults.delete'), admin_post_path(post), method: :delete, data: { turbo_confirm: t('defaults.message.Are_you_sure') }, class: "btn btn-sm btn-outline mr-1" %>
-        <%= link_to t('defaults.show'), post, class: "btn btn-sm btn-primary" %>
+        <%= link_to t('defaults.cta'), post.app_url, target: '_blank', class:"btn btn-sm btn-secondary mr-1" %>
+        <%= link_to t('defaults.watch_code'), post.github_url, target: '_blank', class:"btn btn-sm btn-outline mr-1" %>
       </div>
+      <%= link_to t('defaults.post_comment'), post_path(post), class:"btn btn-sm btn-primary mt-2" %>
     </div>
   </div>
 <% end %>

@@ -1,14 +1,14 @@
-<div class="card w-auto bg-base-100 shadow-xl m-2 border-4 border-indigo-300/75">
+<div class="card w-auto bg-base-100 shadow-xl m-2 border-4 border-teal-300/75">
 <iframe src=<%= post.app_url %> alt=<%= post.app_name %> class="w-full h-64" ></iframe>
   <div class="card-body">
     <div class="card-title"><%= post.app_name %></div>
     <p class="card-actions justify-end font-bold"><%= post.graduating_class %>期&nbsp;&nbsp;<%= post.name %></p>
     <div class="badge badge-primary  badge-outline"><%= t('defaults.usage_technology') %></div><div><%= post.usage_technology %></div>
-    <div class="badge badge-primary  badge-outline"><%= t('defaults.points_for_effort') %></div><div><%= post.points_for_effort %></div>
+    <div class="badge badge-primary  badge-outline"><%= t('defaults.points_for_effort') %></div><div><%= raw Rinku.auto_link(post.points_for_effort) %></div>
     <div class="badge badge-primary  badge-outline"><%= t('defaults.target_users') %></div><div><%= post.target_users %></div>
     <div class="badge badge-primary  badge-outline"><%= t('defaults.pain_point') %></div><div><%= post.pain_point %></div>
     <div class="badge badge-primary  badge-outline"><%= t('defaults.remedy') %></div><div><%= post.remedy %></div>
-    <div class="badge badge-primary  badge-outline"><%= t('defaults.comment') %></div><div><%= post.comment %></div>
+    <div class="badge badge-primary  badge-outline"><%= t('defaults.comment') %></div><div><%= raw Rinku.auto_link(post.comment) %></div>
     <div class="flex flex-row mt-5">
       <%= link_to t('defaults.edit'), edit_admin_post_path(post), class:"btn btn-sm btn-secondary mr-1" %>
       <%= button_to t('defaults.delete'), admin_post_path(post), method: :delete,  data: { turbo_confirm: t('defaults.message.Are_you_sure') }, class:"btn btn-sm btn-outline mr-1" %>
