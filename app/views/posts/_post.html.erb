@@ -1,6 +1,10 @@
 <div class="flex-auto w-full lg:w-1/3 p-2">
   <div class="card w-auto bg-base-100 shadow-xl m-2 border-4 border-indigo-300/75">
-    <iframe src=<%= post.app_url %> alt=<%= post.app_name %> class="w-full h-64" ></iframe>
+  <% if post.site_image.present? %>
+    <%= image_tag(post.site_image, class: "w-full h-64") %>
+  <% else %>
+    <div class="w-full h-64 bg-gray-200"></div>
+  <% end %>
     <div class="card-body collapse">
       <input type="checkbox" />
       <div class="collapse-title font-medium">
