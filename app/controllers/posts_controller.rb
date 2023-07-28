@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     @categories = Category.all
     @selected_category_id = params[:category_id]
-    @posts = filtered_posts
+    @posts = filtered_posts.order(id: :asc)
   end
 
   def show

@@ -27,6 +27,7 @@ ja:
         pain_point: '課題'
         remedy: '解決策'
         comment: 'コメント'
+        ogp_image_url: 'OGP画像URL'
       category:
         name: 'カテゴリー'
       comment:

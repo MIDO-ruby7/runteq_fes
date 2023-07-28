@@ -93,3 +93,7 @@ gem 'rails-i18n'
 
 #url auto link
 gem 'rinku'
+
+#OGP scraping
+gem 'nokogiri'
+gem 'open-uri'
