@@ -22,7 +22,11 @@ class Post < ApplicationRecord
         charset = f.charset
         f.read
       end
-      Nokogiri::HTML.parse(html, charset)
+      doc = Nokogiri::HTML.parse(html, charset)
+      ogp_image_url = doc.css('//meta[property="og:image"]/@content').to_s
+
+      update_column(:ogp_image_url, ogp_image_url) unless ogp_image_url.blank?
+      doc
     rescue OpenURI::HTTPError => e
       Rails.logger.error "Failed to fetch OGP info for #{url}: #{e}"
       nil
@@ -42,6 +46,8 @@ class Post < ApplicationRecord
   # end
 
   def site_image
+    return ogp_image_url if ogp_image_url.present?
+
     doc = fetch_ogp_info
     if doc
       doc.css('//meta[property="og:image"]/@content').to_s
