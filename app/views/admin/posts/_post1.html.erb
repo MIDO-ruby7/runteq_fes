@@ -1,6 +1,10 @@
 <% @posts.each do |post| %>
   <div class="card w-auto bg-base-100 shadow-xl m-2 border-4 border-indigo-300/75">
-    <iframe src=<%= post.app_url %> alt=<%= post.app_name %> class="w-full h-64"></iframe>
+    <% if post.site_image.present? %>
+      <%= image_tag(post.site_image, class: "w-full h-64") %>
+    <% else %>
+      <div class="w-full h-64 bg-gray-200"></div>
+    <% end %>
     <div class="card-body">
       <div class="card-title"><%= post.app_name %></div>
       <p class="card-actions justify-end font-bold"><%= post.graduating_class %>期&nbsp;&nbsp;<%= post.name %></p>
