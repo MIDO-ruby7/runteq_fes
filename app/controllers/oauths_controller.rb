@@ -2,6 +2,7 @@ require 'octokit'
 
 class OauthsController < ApplicationController
   include Rails.application.routes.url_helpers
+  skip_before_action :require_login, only: %i[oauth callback]
 
   def oauth
     login_at(params[:provider])
