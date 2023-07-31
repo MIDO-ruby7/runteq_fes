@@ -13,6 +13,7 @@
 
   <body>
     <%= render 'shared/header'%>
+    <h1 class="md:text-4xl m-4 font-bold text-orange-600 flex justify-center text-3xl link link-warning" id="confetti" onmousedown="party.confetti(this)"><%= link_to t('defaults.vote'), 'https://docs.google.com/forms/d/e/1FAIpQLSctHYJbO29gooF1Tlcw-o-Gv99g67OANd23ROKIi37MDX_ONg/viewform?usp=sf_link' %></h1>
     <div>
       <%= yield %>
     </div>
