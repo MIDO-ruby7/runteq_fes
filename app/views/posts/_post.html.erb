@@ -14,13 +14,13 @@
           <%= t('defaults.show') %>
         </div>
       </div>
-      <div class="collapse-content">
+      <div class="collapse-content break-all">
         <div class="badge badge-neutral badge-outline"><%= t('defaults.usage_technology') %></div><div><%= post.usage_technology %></div>
-        <div class="badge badge-neutral  badge-outline"><%= t('defaults.points_for_effort') %></div><div><%= raw Rinku.auto_link(post.points_for_effort) %></div>
+        <div class="badge badge-neutral  badge-outline"><%= t('defaults.points_for_effort') %></div><div class="break-all"><%= raw Rinku.auto_link(post.points_for_effort) %></div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.target_users') %></div><div><%= post.target_users %></div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.pain_point') %></div><div><%= post.pain_point %></div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.remedy') %></div><div><%= post.remedy %></div>
-        <div class="badge badge-neutral  badge-outline"><%= t('defaults.comment') %></div><div><%= raw Rinku.auto_link(post.comment) %></div>
+        <div class="badge badge-neutral  badge-outline"><%= t('defaults.comment') %></div><div class="break-all"><%= raw Rinku.auto_link(post.comment) %></div>
       </div>
       <div class="flex flex-row mt-5">
         <%= link_to t('defaults.cta'), post.app_url, target: '_blank', class:"btn btn-sm btn-secondary mr-1" %>
