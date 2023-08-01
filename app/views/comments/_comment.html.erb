@@ -1,5 +1,8 @@
 <div class="chat-bubble chat-bubble-accent mb-2">
-  <h3 class="font-bold"><%= comment.user.nickname %></h3>
+  <h3 class="font-bold">
+    <%= comment.user.graduating_class&.to_s + t('defaults.graduating_class') %>&emsp;
+    <%= comment.user.nickname&.to_s %>
+  </h3>
   <div id="js-comment-<%= comment.id %>">
     <%= simple_format(comment.body) %>
   </div>
