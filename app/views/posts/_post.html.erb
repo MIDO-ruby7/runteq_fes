@@ -9,7 +9,13 @@
       <input type="checkbox" />
       <div class="collapse-title font-medium">
         <div class="card-title"><%= post.app_name %></div>
-        <p class="card-actions justify-end font-bold"><%= post.graduating_class %>期&nbsp;&nbsp;<%= simple_format(post.name) %></p>
+        <p class="card-actions justify-end font-bold">
+          <%= post.graduating_class %>期&nbsp;&nbsp;
+          <%= post.name %>
+        </p>
+        <% if post.members.present? %>
+          <div class="font-bold"><%= post.members %></div>
+        <% end %>
         <div class="link link-secondary font-bold">
           <%= t('defaults.show') %>
         </div>
