@@ -9,7 +9,7 @@
       <input type="checkbox" />
       <div class="collapse-title font-medium">
         <div class="card-title"><%= post.app_name %></div>
-        <p class="card-actions justify-end font-bold"><%= post.graduating_class %>期&nbsp;&nbsp;<%= post.name %></p>
+        <p class="card-actions justify-end font-bold"><%= post.graduating_class %>期&nbsp;&nbsp;<%= simple_format(post.name) %></p>
         <div class="link link-secondary font-bold">
           <%= t('defaults.show') %>
         </div>
@@ -17,9 +17,9 @@
       <div class="collapse-content break-all">
         <div class="badge badge-neutral badge-outline"><%= t('defaults.usage_technology') %></div><div><%= post.usage_technology %></div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.points_for_effort') %></div><div class="break-all"><%= raw Rinku.auto_link(post.points_for_effort) %></div>
-        <div class="badge badge-neutral  badge-outline"><%= t('defaults.target_users') %></div><div><%= post.target_users %></div>
-        <div class="badge badge-neutral  badge-outline"><%= t('defaults.pain_point') %></div><div><%= post.pain_point %></div>
-        <div class="badge badge-neutral  badge-outline"><%= t('defaults.remedy') %></div><div><%= post.remedy %></div>
+        <div class="badge badge-neutral  badge-outline"><%= t('defaults.target_users') %></div><div><%= simple_format(post.target_users) %></div>
+        <div class="badge badge-neutral  badge-outline"><%= t('defaults.pain_point') %></div><div><%= simple_format(post.pain_point) %></div>
+        <div class="badge badge-neutral  badge-outline"><%= t('defaults.remedy') %></div><div><%= simple_format(post.remedy) %></div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.comment') %></div><div class="break-all"><%= simple_format(post.comment) %></div>
       </div>
       <div class="flex flex-row mt-5">
