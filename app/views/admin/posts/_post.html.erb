@@ -10,8 +10,8 @@
       <%= post.graduating_class %>期&nbsp;&nbsp;
       <%= post.name %>
     </p>
-    <% if post.members.present? %>
-      <div class="font-bold"><%= post.members %></div>
+    <% if post.member.present? %>
+      <div class="font-bold"><%= post.member %></div>
     <% end %>
     <div class="badge badge-primary  badge-outline"><%= t('defaults.usage_technology') %></div><div><%= post.usage_technology %></div>
     <div class="badge badge-primary  badge-outline"><%= t('defaults.points_for_effort') %></div><div><%= raw Rinku.auto_link(post.points_for_effort) %></div>

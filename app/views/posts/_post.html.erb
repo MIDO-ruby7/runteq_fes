@@ -13,8 +13,8 @@
           <%= post.graduating_class %>期&nbsp;&nbsp;
           <%= post.name %>
         </p>
-        <% if post.members.present? %>
-          <div class="font-bold"><%= post.members %></div>
+        <% if post.member.present? %>
+          <div class="font-bold"><%= post.member %></div>
         <% end %>
         <div class="link link-secondary font-bold">
           <%= t('defaults.show') %>
