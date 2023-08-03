@@ -108,3 +108,4 @@ ja:
       index:
         open_uploader: '➡️データの新規登録はここをクリック'
         category_edit: '※カテゴリーがない場合は先にここから登録してください'
+        import_csv: 'CSVインポートの使い方はこちらから'
