@@ -3,7 +3,7 @@
   <% if post.site_image.present? %>
     <%= image_tag(post.site_image, class: "w-full h-64") %>
   <% else %>
-    <div class="w-full h-64 bg-gray-200"></div>
+    <div class="w-full h-64 bg-gray-200 text-2xl"><%= post.app_name %></div>
   <% end %>
     <div class="card-body">
       <div class="card-title"><%= post.app_name %></div>
