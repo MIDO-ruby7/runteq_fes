@@ -22,7 +22,14 @@
       </div>
       <div class="collapse-content break-all">
         <div class="badge badge-neutral badge-outline"><%= t('defaults.usage_technology') %></div><div><%= post.usage_technology %></div>
-        <div class="badge badge-neutral  badge-outline"><%= t('defaults.points_for_effort') %></div><div class="break-all"><%= raw Rinku.auto_link(post.points_for_effort) %></div>
+        <div class="badge badge-neutral  badge-outline"><%= t('defaults.points_for_effort') %></div>
+        <div class="break-all">
+          <% if post.points_for_effort.present? %>
+            <%= raw Rinku.auto_link(post.points_for_effort) %>
+          <% else %>
+            <%= t('defaults.no_points_available') %>
+          <% end %>
+        </div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.target_users') %></div><div><%= simple_format(post.target_users) %></div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.pain_point') %></div><div><%= simple_format(post.pain_point) %></div>
         <div class="badge badge-neutral  badge-outline"><%= t('defaults.remedy') %></div><div><%= simple_format(post.remedy) %></div>
