@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(current_user.id)
     if @user.update(user_params)
-      redirect_to users_path, notice: t('defaults.message.success')
+      redirect_to posts_path, notice: t('defaults.message.success')
     else
       flash.now[:warning] = t('defaults.message.fail')
       render :edit, status: :unprocessable_entity
